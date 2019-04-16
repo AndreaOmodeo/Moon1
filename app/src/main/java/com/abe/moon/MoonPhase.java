@@ -3,7 +3,6 @@ package com.abe.moon;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.TimeZone;
-//import java.util.TimeZone;
 
 /**<p>Moon phase calculation routines for computing:</p> 
  * <ol>
@@ -50,7 +49,7 @@ public class MoonPhase {
     private Calendar _curCal;
     private double _JD;
     private double _phase;
-    private static double _moonAgeAsDays;
+    private double _moonAgeAsDays;
     
     private String moon_phase_name[] = {
     		"New moon",        	// 0
@@ -81,22 +80,22 @@ public class MoonPhase {
     /*
      * Some useful mathematical functions used by John Walkers `phase()' function.
      */
-    public static double FIXANGLE(double a) {
+    private double FIXANGLE(double a) {
         return (a) - 360.0 * (Math.floor((a) / 360.0));
     }
 
-    public static double TORAD(double d) {
+    private double TORAD(double d) {
         return (d) * (MY_PI / 180.0);
     }
 
-    public static double TODEG(double r) {
+    private double TODEG(double r) {
         return (r) * (180.0 / MY_PI);
     }
 
     /*
        Solves the equation of Kepler.
     */
-    public static double kepler(double m) {
+    private double kepler(double m) {
         double e;
         double delta;
         e = m = TORAD(m);
@@ -150,7 +149,7 @@ public class MoonPhase {
          Reformation period likewise the leap year rule as used by the
          Eastern orthodox churches --- and returns them.
     */
-    public static int days_of_february(int year) {
+    private int days_of_february(int year) {
         int day;
         if ((year > greg[YEAR])
                 || ((year == greg[YEAR])
@@ -173,7 +172,7 @@ public class MoonPhase {
     }
 
 
-    public static int SGN(double gc_x) {
+    private int SGN(double gc_x) {
         return gc_x < 0 ? -1 : gc_x > 0 ? 1 : 0;
     }
 
@@ -233,7 +232,7 @@ public class MoonPhase {
        program. Please leave the original attribution information intact so
        that credit and blame may be properly apportioned.</p>
     */
-    public static double phase(double julian_date) {
+    private double phase(double julian_date) {
         double date_within_epoch;
         double sun_eccent;
         double sun_mean_anomaly;
@@ -261,7 +260,7 @@ public class MoonPhase {
         sun_perigree_co_ordinates_to_epoch = FIXANGLE(sun_mean_anomaly + SUN_ELONG_EPOCH - SUN_ELONG_PERIGEE);
         sun_eccent = kepler(sun_perigree_co_ordinates_to_epoch);
         sun_eccent = Math.sqrt((1.0 + ECCENT_EARTH_ORBIT) / (1.0 - ECCENT_EARTH_ORBIT)) * Math.tan(sun_eccent / 2.0);
-        sun_eccent = 2.0 * TODEG(atan(sun_eccent));
+        sun_eccent = 2.0 * TODEG(Math.atan(sun_eccent));
         sun_geocentric_elong = FIXANGLE(sun_eccent + SUN_ELONG_PERIGEE);
         /*
            Calculation of the Moon's position.
@@ -300,7 +299,7 @@ public class MoonPhase {
  <p>Converted to Java by vriolk@gmail.com from original file mooncalc.c,
  part of moontool http://www.fourmilab.ch/moontoolw/moont16s.zip</p>
  */
-    public static double  calendarToJD(Calendar cal) {
+    private double  calendarToJD(Calendar cal) {
 
         /* Algorithm as given in Meeus, Astronomical Algorithms, Chapter 7, page 61*/
         long year = cal.get(Calendar.YEAR);
@@ -353,8 +352,8 @@ public class MoonPhase {
         
     }
     
-    public String getPhaseIndexString(int pi) {
-    	return moon_phase_name[pi];
+    public String getPhaseName() {
+    	return moon_phase_name[getPhaseIndex()];
     }
     /**
      * Computes the moon phase index as a value from 0 to 7
@@ -364,19 +363,11 @@ public class MoonPhase {
      * @return moon index 0..7
      * 
      */
-    private static int computePhaseIndex(Calendar cal){
+    private int computePhaseIndex(Calendar cal){
 
      int    day_year[] = { -1, -1, 30, 58, 89, 119,
                                                150, 180, 211, 241, 272,
                                                303, 333 };
-//    String moon_phase_name[] = { "New Moon",        // 0
-//                                                      "Waxing crescent",    // 1 
-//                                                      "First quarter",      // 2 
-//                                                      "Waxing gibbous",     // 3
-//                                                      "Full Moon",          // 4 
-//                                                      "Waning gibbous",     // 5
-//                                                      "Third quarter",      // 6
-//                                                      "Waning crescent" };  // 7
     
     int phase;  // Moon phase
 //    double factor; // Moon phase factor
@@ -436,15 +427,9 @@ public class MoonPhase {
     /** isLeapYearP
      Return true if the year is a leapyear
      */
-    private static boolean isLeapYearP(int year) {
+    private boolean isLeapYearP(int year) {
         return ((year % 4 == 0) &&
                 ((year % 400 == 0) || (year % 100 != 0)));
-    }
-
-    public void updateCal(Calendar c) {
-        _curCal =c;
-        _JD = calendarToJD(_curCal);
-        _phase = phase(_JD);
     }
 
     public String getMoonAgeAsDays() {
@@ -458,107 +443,35 @@ public class MoonPhase {
                 aom_m + (aom_m == 1 ? " minute":" minutes");
     }
 
-    
-    static public double atan(double x) {
-        double SQRT3 = 1.732050807568877294;
-        boolean signChange=false;
-        boolean Invert=false;
-        int sp=0;
-        double x2, a;
-        // check up the sign change
-        if(x<0.) {
-            x=-x;
-            signChange=true;
-        }
-        // check up the invertation
-        if(x>1.) {
-            x=1/x;
-            Invert=true;
-        }
-        // process shrinking the domain until x<PI/12
-        while(x>Math.PI/12) {
-            sp++;
-            a=x+SQRT3;
-            a=1/a;
-            x=x*SQRT3;
-            x=x-1;
-            x=x*a;
-        }
-        // calculation core
-        x2=x*x;
-        a=x2+1.4087812;
-        a=0.55913709/a;
-        a=a+0.60310579;
-        a=a-(x2*0.05160454);
-        a=a*x;
-        // process until sp=0
-        while(sp>0) {
-            a=a+Math.PI/6;
-            sp--;
-        }
-        // invertation took place
-        if(Invert) 
-            a=Math.PI/2-a;
-        // sign change took place
-        if(signChange) 
-            a=-a;
-        //
-        return a;
-    }
- 
+/*    
+public static void main(String args[]) {
+        System.out.println(new Date());
 
-  //  public static void main(String args[]) {
-//        System.out.println(new SimpleDateFormat("EEEE, dd-MMMM-yyyy HH:mm zzzz").format(new Date()));
-//
-//        MoonPhase mp = new MoonPhase();
-//        System.out.printf("Current phase: %f%n", mp.getPhase());
-//        System.out.println("Moon Age: " + mp.getMoonAgeAsDays());
-//
-//        Calendar c = Calendar.getInstance();
-//        c.setTimeInMillis(System.currentTimeMillis());
-//        c.add(Calendar.DAY_OF_WEEK, -22);
-//
-//        for (int i=0; i< 33; i++){
-//            c.add(Calendar.DAY_OF_WEEK, 1);
-//            mp.updateCal(c);
-//            System.out.format("%1$td-%1$tB,%1$tY  %1$tH:%1$tM:%1$tS  ",c);
-//            System.out.printf("%f%n", mp.getPhase());
-//        }
+        MoonPhase mp = new MoonPhase(Calendar.getInstance());
+        System.out.printf("Current phase: %f%n", mp.getPhase());
+        System.out.println("Moon Age: " + mp.getMoonAgeAsDays());
 
- 
-        //System.out.println( new SimpleDateFormat("EEEE, dd-MMMM-yyyy HH:mm zzzz").format(c.getTime()));
+        Calendar c = Calendar.getInstance();
+        c.add(Calendar.DAY_OF_WEEK, -22);
 
-//        double JD = calendarToJD_BAD_WRONG(c);
-//        double JD2 =calendarToJD(c);
-//
-//        System.out.println("Julian Date: " + JD);
-//        System.out.println("Julian Date2: " + JD2);
-//        System.out.println("Parsed Phase: " + phase(JD));
-//        System.out.println("Parsed Phase2: " + phase(JD2));
-//
-//        c.add(Calendar.DAY_OF_WEEK, 1);
-//        JD = calendarToJD_BAD_WRONG(c);
-//        System.out.println("Parsed Phase +1 day: " + phase(JD));
-//        System.out.printf("F 22-Jan-2008 2454488.0649868953 %.8f\n", phase(2454488.0649868953));
-//        System.out.printf("N 07-Mar-2008 2454533.2179779503 %.8f\n", phase(2454533.2179779503));
-//        System.out.printf("F 21-Mar-2008 2454547.2769324942 %.8f\n", phase(2454547.2769324942));
-//        System.out.printf("N 27-Dec-2008 2454828.0159972804 %.8f\n", phase(2454828.0159972804));
-//        System.out.printf("F 11-Jan-2009 2454842.6434176303 %.8f\n", phase(2454842.6434176303));
-//        System.out.printf("N 07-Mar-2008 2454533.2179779503 %.8f\n", phase(2454533.2179779503));
-
-     private static Calendar adjustTimeZone(Calendar c, int offsetInHours){
+        for (int i=0; i< 33; i++){
+            c.add(Calendar.DAY_OF_WEEK, 1);
+            mp = new MoonPhase(c);
+            System.out.format("%1$td %1$tB,%1$tY  %1$tH:%1$tM:%1$tS  ",c);
+			System.out.printf("Phase index: %d ", mp.getPhaseIndex());
+			System.out.printf("Phase string: %s ", mp.getPhaseName());
+            System.out.printf("%f%n", mp.getPhase());
+        }
+}
+*/
+     private Calendar adjustTimeZone(Calendar c, int offsetInHours){
         long currTime = c.getTime().getTime();
         c.setTime(new Date(currTime + offsetInHours*1000*60*60 ));
         return c;
     }
 
     public int getCurrentTimeZone(){
-        //if (this.prefs.autoTimeZone){
             return TimeZone.getDefault().getRawOffset()/1000*60*60;
-        //} else{
-          //  return prefs.timeZoneOffset;
-        //}
     }
 
 }
-
