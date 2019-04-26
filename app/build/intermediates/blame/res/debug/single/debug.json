@@ -1,62 +1,62 @@
 [
     {
-        "merged": "/home/andrea/AndroidStudioProjects/Moon1/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_moon.png.flat",
-        "source": "/home/andrea/AndroidStudioProjects/Moon1/app/src/main/res/drawable-hdpi/ic_moon.png"
+        "merged": "/home/andrea/StudioProjects/Moon1/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_moon.png.flat",
+        "source": "/home/andrea/StudioProjects/Moon1/app/src/main/res/drawable-hdpi/ic_moon.png"
     },
     {
-        "merged": "/home/andrea/AndroidStudioProjects/Moon1/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_launcher.png.flat",
-        "source": "/home/andrea/AndroidStudioProjects/Moon1/app/src/main/res/drawable-xhdpi/ic_launcher.png"
+        "merged": "/home/andrea/StudioProjects/Moon1/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_moon.png.flat",
+        "source": "/home/andrea/StudioProjects/Moon1/app/src/main/res/drawable-mdpi/ic_moon.png"
     },
     {
-        "merged": "/home/andrea/AndroidStudioProjects/Moon1/app/build/intermediates/res/merged/debug/raw_moonsuncalcv3.xls.flat",
-        "source": "/home/andrea/AndroidStudioProjects/Moon1/app/src/main/res/raw/moonsuncalcv3.xls"
+        "merged": "/home/andrea/StudioProjects/Moon1/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_moon_final.png.flat",
+        "source": "/home/andrea/StudioProjects/Moon1/app/src/main/res/drawable-xxhdpi/ic_moon_final.png"
     },
     {
-        "merged": "/home/andrea/AndroidStudioProjects/Moon1/app/build/intermediates/res/merged/debug/layout_activity_main.xml.flat",
-        "source": "/home/andrea/AndroidStudioProjects/Moon1/app/src/main/res/layout/activity_main.xml"
+        "merged": "/home/andrea/StudioProjects/Moon1/app/build/intermediates/res/merged/debug/layout_activity_main.xml.flat",
+        "source": "/home/andrea/StudioProjects/Moon1/app/src/main/res/layout/activity_main.xml"
     },
     {
-        "merged": "/home/andrea/AndroidStudioProjects/Moon1/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_moon.png.flat",
-        "source": "/home/andrea/AndroidStudioProjects/Moon1/app/src/main/res/drawable-mdpi/ic_moon.png"
+        "merged": "/home/andrea/StudioProjects/Moon1/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_launcher.png.flat",
+        "source": "/home/andrea/StudioProjects/Moon1/app/src/main/res/drawable-mdpi/ic_launcher.png"
     },
     {
-        "merged": "/home/andrea/AndroidStudioProjects/Moon1/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_moon_final.png.flat",
-        "source": "/home/andrea/AndroidStudioProjects/Moon1/app/src/main/res/drawable-xhdpi/ic_moon_final.png"
+        "merged": "/home/andrea/StudioProjects/Moon1/app/build/intermediates/res/merged/debug/menu_main.xml.flat",
+        "source": "/home/andrea/StudioProjects/Moon1/app/src/main/res/menu/main.xml"
     },
     {
-        "merged": "/home/andrea/AndroidStudioProjects/Moon1/app/build/intermediates/res/merged/debug/menu_main.xml.flat",
-        "source": "/home/andrea/AndroidStudioProjects/Moon1/app/src/main/res/menu/main.xml"
+        "merged": "/home/andrea/StudioProjects/Moon1/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_launcher.png.flat",
+        "source": "/home/andrea/StudioProjects/Moon1/app/src/main/res/drawable-xhdpi/ic_launcher.png"
     },
     {
-        "merged": "/home/andrea/AndroidStudioProjects/Moon1/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_moon_final.png.flat",
-        "source": "/home/andrea/AndroidStudioProjects/Moon1/app/src/main/res/drawable-mdpi/ic_moon_final.png"
+        "merged": "/home/andrea/StudioProjects/Moon1/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_moon_final.png.flat",
+        "source": "/home/andrea/StudioProjects/Moon1/app/src/main/res/drawable-hdpi/ic_moon_final.png"
     },
     {
-        "merged": "/home/andrea/AndroidStudioProjects/Moon1/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_moon_final.png.flat",
-        "source": "/home/andrea/AndroidStudioProjects/Moon1/app/src/main/res/drawable-xxhdpi/ic_moon_final.png"
+        "merged": "/home/andrea/StudioProjects/Moon1/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_launcher.png.flat",
+        "source": "/home/andrea/StudioProjects/Moon1/app/src/main/res/drawable-hdpi/ic_launcher.png"
     },
     {
-        "merged": "/home/andrea/AndroidStudioProjects/Moon1/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_moon_final.png.flat",
-        "source": "/home/andrea/AndroidStudioProjects/Moon1/app/src/main/res/drawable-hdpi/ic_moon_final.png"
+        "merged": "/home/andrea/StudioProjects/Moon1/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_moon.png.flat",
+        "source": "/home/andrea/StudioProjects/Moon1/app/src/main/res/drawable-xxhdpi/ic_moon.png"
     },
     {
-        "merged": "/home/andrea/AndroidStudioProjects/Moon1/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_moon.png.flat",
-        "source": "/home/andrea/AndroidStudioProjects/Moon1/app/src/main/res/drawable-xhdpi/ic_moon.png"
+        "merged": "/home/andrea/StudioProjects/Moon1/app/build/intermediates/res/merged/debug/layout-large_activity_main.xml.flat",
+        "source": "/home/andrea/StudioProjects/Moon1/app/src/main/res/layout-large/activity_main.xml"
     },
     {
-        "merged": "/home/andrea/AndroidStudioProjects/Moon1/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_launcher.png.flat",
-        "source": "/home/andrea/AndroidStudioProjects/Moon1/app/src/main/res/drawable-hdpi/ic_launcher.png"
+        "merged": "/home/andrea/StudioProjects/Moon1/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_moon_final.png.flat",
+        "source": "/home/andrea/StudioProjects/Moon1/app/src/main/res/drawable-xhdpi/ic_moon_final.png"
     },
     {
-        "merged": "/home/andrea/AndroidStudioProjects/Moon1/app/build/intermediates/res/merged/debug/layout-large_activity_main.xml.flat",
-        "source": "/home/andrea/AndroidStudioProjects/Moon1/app/src/main/res/layout-large/activity_main.xml"
+        "merged": "/home/andrea/StudioProjects/Moon1/app/build/intermediates/res/merged/debug/raw_moonsuncalcv3.xls.flat",
+        "source": "/home/andrea/StudioProjects/Moon1/app/src/main/res/raw/moonsuncalcv3.xls"
     },
     {
-        "merged": "/home/andrea/AndroidStudioProjects/Moon1/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_launcher.png.flat",
-        "source": "/home/andrea/AndroidStudioProjects/Moon1/app/src/main/res/drawable-mdpi/ic_launcher.png"
+        "merged": "/home/andrea/StudioProjects/Moon1/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_moon.png.flat",
+        "source": "/home/andrea/StudioProjects/Moon1/app/src/main/res/drawable-xhdpi/ic_moon.png"
     },
     {
-        "merged": "/home/andrea/AndroidStudioProjects/Moon1/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_moon.png.flat",
-        "source": "/home/andrea/AndroidStudioProjects/Moon1/app/src/main/res/drawable-xxhdpi/ic_moon.png"
+        "merged": "/home/andrea/StudioProjects/Moon1/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_moon_final.png.flat",
+        "source": "/home/andrea/StudioProjects/Moon1/app/src/main/res/drawable-mdpi/ic_moon_final.png"
     }
 ]

@@ -56,7 +56,7 @@ public class Moon extends View {
 	public void setCalendar(Calendar c) {
 		calendar = c;
 		mp = new MoonPhase(calendar);
-		phaseString = mp.getPhaseIndexString(mp.getPhaseIndex());
+		phaseString = mp.getPhaseName();
 	}
 	
 	public String getPhaseString () {
