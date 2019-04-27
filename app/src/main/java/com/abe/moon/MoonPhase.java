@@ -17,31 +17,31 @@ public class MoonPhase {
 
     //Prefs prefs;
 
-    public static final double MY_PI = 3.14159265358979323846;
+    private static final double MY_PI = 3.14159265358979323846;
     public static final double MY_TWO_PI = 6.28318530717958647692;
-    public static final double EPOCH = 2444238.5;    /* 1980 January 0.0. */
-    public static final double SUN_ELONG_EPOCH = 278.833540;   /* Ecliptic longitude of the Sun at epoch 1980.0. */
-    public static final double SUN_ELONG_PERIGEE = 282.596403;   /* Ecliptic longitude of the Sun at perigee. */
-    public static final double ECCENT_EARTH_ORBIT = 0.016718;     /* Eccentricity of Earth's orbit. */
-    public static final double MOON_MEAN_LONGITUDE_EPOCH = 64.975464;    /* Moon's mean lonigitude at the epoch. */
-    public static final double MOON_MEAN_LONGITUDE_PERIGREE = 349.383063;   /* Mean longitude of the perigee at the epoch. */
-    public static final double KEPLER_EPSILON = 1E-6;         /* Accurancy of the Kepler equation. */
+    private static final double EPOCH = 2444238.5;    /* 1980 January 0.0. */
+    private static final double SUN_ELONG_EPOCH = 278.833540;   /* Ecliptic longitude of the Sun at epoch 1980.0. */
+    private static final double SUN_ELONG_PERIGEE = 282.596403;   /* Ecliptic longitude of the Sun at perigee. */
+    private static final double ECCENT_EARTH_ORBIT = 0.016718;     /* Eccentricity of Earth's orbit. */
+    private static final double MOON_MEAN_LONGITUDE_EPOCH = 64.975464;    /* Moon's mean lonigitude at the epoch. */
+    private static final double MOON_MEAN_LONGITUDE_PERIGREE = 349.383063;   /* Mean longitude of the perigee at the epoch. */
+    private static final double KEPLER_EPSILON = 1E-6;         /* Accurancy of the Kepler equation. */
     public static final long RC_MIN_BCE_TO_1_CE = 1721424L;  /* Days between 1.5-Jan-4713 BCE and 1.5-Jan-0001 CE */
-    public static final double SYNMONTH    = 29.53058868;    /* Synodic month (new Moon to new Moon) */
+    private static final double SYNMONTH    = 29.53058868;    /* Synodic month (new Moon to new Moon) */
     public static final int DAY_LAST = 365;
 
-    public static final boolean orthodox_calendar = false;
+    private static final boolean orthodox_calendar = false;
 
     public static final int mvec[] =
             {
                     0, 31, 59, 90, 120, 151,
                     181, 212, 243, 273, 304, 334
             };
-    public static final int greg[] = {1582, 10, 5, 14};
-    public static final int YEAR = 0;
-    public static final int MONTH = 1;
+    private static final int greg[] = {1582, 10, 5, 14};
+    private static final int YEAR = 0;
+    private static final int MONTH = 1;
     public static final int FIRST_DAY = 2;
-    public static final int LAST_DAY = 3;
+    private static final int LAST_DAY = 3;
     
     
 
@@ -370,7 +370,6 @@ public class MoonPhase {
                                                303, 333 };
     
     int phase;  // Moon phase
-//    double factor; // Moon phase factor
     int year, month, day, hour, min, sec;
         
         year = cal.get(Calendar.YEAR);
