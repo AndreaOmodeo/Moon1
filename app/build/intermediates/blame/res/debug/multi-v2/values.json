@@ -1,10 +1,27 @@
 {
     "logs": [
         {
-            "outputFile": "/home/andrea/AndroidStudioProjects/Moon1/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
+            "outputFile": "/home/andrea/StudioProjects/Moon1/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
             "map": [
                 {
-                    "source": "/home/andrea/AndroidStudioProjects/Moon1/app/src/main/res/values/styles.xml",
+                    "source": "/home/andrea/StudioProjects/Moon1/app/src/main/res/values/strings.xml",
+                    "from": {
+                        "startLines": "4,3,5,6,7",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "98,56,151,204,248",
+                        "endColumns": "52,41,52,43,44",
+                        "endOffsets": "146,93,199,243,288"
+                    },
+                    "to": {
+                        "startLines": "4,5,6,7,8",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "169,222,264,317,361",
+                        "endColumns": "52,41,52,43,41",
+                        "endOffsets": "217,259,312,356,398"
+                    }
+                },
+                {
+                    "source": "/home/andrea/StudioProjects/Moon1/app/src/main/res/values/styles.xml",
                     "from": {
                         "startLines": "6,15",
                         "startColumns": "4,4",
@@ -23,24 +40,7 @@
                     }
                 },
                 {
-                    "source": "/home/andrea/AndroidStudioProjects/Moon1/app/src/main/res/values/strings.xml",
-                    "from": {
-                        "startLines": "4,3,5,6,7",
-                        "startColumns": "4,4,4,4,4",
-                        "startOffsets": "98,56,151,204,248",
-                        "endColumns": "52,41,52,43,44",
-                        "endOffsets": "146,93,199,243,288"
-                    },
-                    "to": {
-                        "startLines": "4,5,6,7,8",
-                        "startColumns": "4,4,4,4,4",
-                        "startOffsets": "169,222,264,317,361",
-                        "endColumns": "52,41,52,43,41",
-                        "endOffsets": "217,259,312,356,398"
-                    }
-                },
-                {
-                    "source": "/home/andrea/AndroidStudioProjects/Moon1/app/src/main/res/values/dimens.xml",
+                    "source": "/home/andrea/StudioProjects/Moon1/app/src/main/res/values/dimens.xml",
                     "from": {
                         "startLines": "3,4",
                         "startColumns": "4,4",
